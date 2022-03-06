@@ -1,4 +1,5 @@
 const mysql = require('mysql2');
+const sequelize = require('sequelize');
 
 // utilize dotenv so we don't have to upload our password
 require('dotenv').config();
@@ -9,7 +10,7 @@ const connection = mysql.createConnection({
   port: 3306,
   user: 'root',
   password: process.env.MYSQL_PASSWORD,
-  database: 'employee_trackerDB'
+  database: 'main_db'
 });
 
 module.exports = connection;
