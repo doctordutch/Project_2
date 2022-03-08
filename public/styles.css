@@ -41,3 +41,10 @@ a {
 body {
     background-color: rgb(117, 126, 61);
 }
+
+aside {
+    background-color: blueviolet;
+    text-align: left;
+    padding: 20px;
+    color: black;
+}

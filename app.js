@@ -9,6 +9,7 @@ const routeAbout = require('./routes/about')
 const routeCourse = require('./controllers/course-routes')
 
 const app = express()
+const sequelize = require("./config/connection");
 
 // use express-handlebars view engine and set views template directory
 const hbs = exphbs.create({

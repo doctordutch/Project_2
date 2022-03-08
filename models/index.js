@@ -1,7 +1,9 @@
-const Courses = require('./courses');
-const Vote = require('./vote');
-const User = require('./user');
+const Course = require('./Courses');
+const Vote = require('./Vote');
+const User = require('./User');
+const Comment = require('./Comment');
 
 
 
-module.exports = { Courses , Vote, User};
+
+module.exports = { Course , Vote, User, Comment};
