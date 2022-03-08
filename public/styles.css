@@ -4,7 +4,7 @@ header {
 }
 
 main {
-    background-color: #49111C;
+    background-color: orange;
     padding: 0 0 15px 0;
 }
 
@@ -25,4 +25,7 @@ footer {
 a {
     text-decoration: none;
     color: black;
+}
+body {
+    background-color: orange;
 }
