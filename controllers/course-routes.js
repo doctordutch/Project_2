@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { Course } = require('../../models');
-const sequelize = require('../../config/connection')
+const { Course } = require('../models');
+const sequelize = require('../config/connection');
 
 
 // get all courses
@@ -25,5 +25,19 @@ router.get('/', (req, res) => {
     });
   });
 
+  // router.get('/:id', (req, res) => {
+  //   Course.findOne({
+  //     where: {
+  //       id: req.params.id
+  //     },
+  //     attributes: [
+  //       'id', 
+  //       'course_name', 
+  //       'provider', 
+  //       'description',
+  //       'created_at',
+  //     ],
+  //   }
+  // })
 
   module.exports = router;
