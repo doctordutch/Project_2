@@ -1,10 +1,11 @@
 {
   "name": "project2",
   "version": "1.0.0",
-  "description": "",
+  "description": "OH NO",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,14 @@
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doctordutch/Project_2.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/doctordutch/Project_2/issues"
+  },
+  "homepage": "https://github.com/doctordutch/Project_2#readme"
 }
