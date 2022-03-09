@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Course } = require('../models');
 const sequelize = require('../config/connection');
-const req = require('express/lib/request');
+////const req = require('express/lib/request');
 const res = require('express/lib/response');
 
 
@@ -12,11 +12,11 @@ router.get('/', (req, res) => {
       attributes: [
         'id', 
         'course_name', 
-        'provider', 
+        'school', 
         'category',
-        'description',
+        'synopsis',
         'created_at',
-        //[sequelize.literal('(SELECT COUNT (*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+        //[sequelize.literal('(SELECT COUNT (*) FROM vote WHERE course.id = vote.course_id)'), 'vote_count']
       ],
       //this determines the sort/order in which posts will appear
       order: [['provider', 'DESC']],
@@ -59,9 +59,9 @@ router.get('/', (req, res) => {
   router.post('/', (req, res) => {
     Course.create({
       course_name: req.body.course_name,
-      provider: req.body.provider,
+      provider: req.body.school,
       category: req.body.category,
-      description: req.body.description
+      description: req.body.synopsis
     })
     .then(dbCourseData => res.json(dbCourseData))
     .catch(err => {

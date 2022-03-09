@@ -15,7 +15,7 @@ Course.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
-    provider: {
+    school: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -23,7 +23,7 @@ Course.init(
         type: DataTypes.STRING,
         allowNull: false
     },
-    description: {
+    synopsis: {
         type: DataTypes.STRING,
         allowNull: false
     }
