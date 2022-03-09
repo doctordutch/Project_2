@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { Course } = require('../models');
 const sequelize = require('../config/connection');
+const req = require('express/lib/request');
+const res = require('express/lib/response');
 
 
 // get all courses
@@ -11,6 +13,7 @@ router.get('/', (req, res) => {
         'id', 
         'course_name', 
         'provider', 
+        'category',
         'description',
         'created_at',
         //[sequelize.literal('(SELECT COUNT (*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -25,19 +28,46 @@ router.get('/', (req, res) => {
     });
   });
 
-  // router.get('/:id', (req, res) => {
-  //   Course.findOne({
-  //     where: {
-  //       id: req.params.id
-  //     },
-  //     attributes: [
-  //       'id', 
-  //       'course_name', 
-  //       'provider', 
-  //       'description',
-  //       'created_at',
-  //     ],
-  //   }
-  // })
+  router.get('/:id', (req, res) => {
+    Course.findOne({
+      where: {
+        id: req.params.id
+      },
+      attributes: [
+        'id', 
+        'course_name', 
+        'provider', 
+        'category',   
+        'description',
+        'created_at',
+      ],
+    })
+    .then(dbCourseData => {
+      if (!dbCourseData) {
+        res.status(404).json({ message: 'Oh no!  There is no course with that id!'});
+        return;
+      }
+      res.json(dbCourseData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+  });
+
+  //this will allow a user to add a course
+  router.post('/', (req, res) => {
+    Course.create({
+      course_name: req.body.course_name,
+      provider: req.body.provider,
+      category: req.body.category,
+      description: req.body.description
+    })
+    .then(dbCourseData => res.json(dbCourseData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+  });
 
   module.exports = router;

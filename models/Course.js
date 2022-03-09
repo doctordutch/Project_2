@@ -1,4 +1,6 @@
+//const { DataTypes, STRING } = require('sequelize/types');
 const sequelize = require('../config/connection');
+const { Model, DataTypes } = require('sequelize');
 
 class Course extends Model {}
 
@@ -16,6 +18,10 @@ Course.init(
     provider: {
         type: DataTypes.STRING,
         allowNull: false,
+    },
+    category: {
+        type: DataTypes.STRING,
+        allowNull: false
     },
     description: {
         type: DataTypes.STRING,
