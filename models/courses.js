@@ -1,3 +1,4 @@
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Course extends Model {}
@@ -20,6 +21,10 @@ Course.init(
     description: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    file: {
+      type: DataTypes.STRING,
+      allowNull: false,
     }
 },
   {
