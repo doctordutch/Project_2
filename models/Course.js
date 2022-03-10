@@ -1,6 +1,6 @@
-//const { DataTypes, STRING } = require('sequelize/types');
-const sequelize = require('../config/connection');
 const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
 
 class Course extends Model {}
 
@@ -27,6 +27,10 @@ Course.init(
         type: DataTypes.STRING,
         allowNull: false
     }
+    // file: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // }
 },
   {
     sequelize,
