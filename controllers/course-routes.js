@@ -14,8 +14,8 @@ router.get('/', (req, res) => {
         'course_name', 
         'school', 
         'category',
-        'synopsis',
-        'created_at',
+        'synopsis'
+        //'created_at',
         //[sequelize.literal('(SELECT COUNT (*) FROM vote WHERE course.id = vote.course_id)'), 'vote_count']
       ],
       //this determines the sort/order in which posts will appear
@@ -38,8 +38,8 @@ router.get('/', (req, res) => {
         'course_name', 
         'school', 
         'category',   
-        'synopsis',
-        'created_at',
+        'synopsis'
+        //'created_at'
       ],
     })
     .then(dbCourseData => {

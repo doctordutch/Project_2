@@ -1,4 +1,4 @@
-const Course = require('./Courses');
+const Course = require('./Course');
 const Vote = require('./Vote');
 const User = require('./User');
 const Comment = require('./Comment');
