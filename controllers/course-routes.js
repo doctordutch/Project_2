@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
         //[sequelize.literal('(SELECT COUNT (*) FROM vote WHERE course.id = vote.course_id)'), 'vote_count']
       ],
       //this determines the sort/order in which posts will appear
-      order: [['provider', 'DESC']],
+      order: [['school', 'DESC']],
     })
     .then(dbCourseData => res.json(dbCourseData))
     .catch(err => {
@@ -36,9 +36,9 @@ router.get('/', (req, res) => {
       attributes: [
         'id', 
         'course_name', 
-        'provider', 
+        'school', 
         'category',   
-        'description',
+        'synopsis',
         'created_at',
       ],
     })
