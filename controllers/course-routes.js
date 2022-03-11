@@ -59,9 +59,9 @@ router.get('/', (req, res) => {
   router.post('/', (req, res) => {
     Course.create({
       course_name: req.body.course_name,
-      provider: req.body.school,
+      school: req.body.school,
       category: req.body.category,
-      description: req.body.synopsis
+      synopsis: req.body.synopsis
     })
     .then(dbCourseData => res.json(dbCourseData))
     .catch(err => {
