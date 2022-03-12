@@ -60,7 +60,9 @@ aside {
     
 
 }
-
+.school-list {
+    color: orange;
+}
 .courses {
     align-items: center;
     display: flex;

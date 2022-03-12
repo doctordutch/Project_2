@@ -1,14 +1,15 @@
 	<aside>
-    <h3>Courses</h3>
-  </aside>
+    <h3>Schools in our class listings:</h3>
+
   <ol class="school-list">
-      {{#each course as |Courses|}}
+      {{#each courses as |course|}}
       <li>
 	    <article class="course">
        <div class="title">
-          <p {{ course.school}}></p>
+          <p {{course.school}}></p>
         </div>
       </article>
       </li>
   {{/each}}
   </ol>
+</aside>
