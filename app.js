@@ -1,7 +1,7 @@
-const express = require('express')
-const exphbs = require('express-handlebars')
-const path = require('path')
-const helpers = require('./utils/helpers')
+const express = require('express');
+const exphbs = require('express-handlebars');
+const path = require('path');
+const helpers = require('./utils/helpers');
 const sequelize = require("./config/connection");
 
 // require routes
@@ -36,6 +36,6 @@ app.get('/courses', (req, res, next) => routeCourse(req, res, next))
 
 // Start the server
 const PORT = process.env.PORT || 3001
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('success'))
 });

@@ -14,7 +14,8 @@ router.get('/', (req, res) => {
         'course_name', 
         'school', 
         'category',
-        'synopsis'
+        'synopsis',
+        'file_image'
         //'created_at',
         //[sequelize.literal('(SELECT COUNT (*) FROM vote WHERE course.id = vote.course_id)'), 'vote_count']
       ],
@@ -38,7 +39,8 @@ router.get('/', (req, res) => {
         'course_name', 
         'school', 
         'category',   
-        'synopsis'
+        'synopsis',
+        'file_image'
         //'created_at'
       ],
     })

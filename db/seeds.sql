@@ -6,6 +6,6 @@ VALUES  ('1', 'Coding Bootcamp', 'Michigan State University', 'Web Design', 'Asy
         ('5', 'Information Technology Essentials', 'DeVry University', 'Web Design', 'Programming, devices and operating system basics'),
         ('6', 'Computer Programming', 'SNHU', 'Web Design', 'Foudational programming & software development'),
         ('7', 'Game Design & Development', 'Michigan State University', 'GameDev', 'Online class, minor degree, game theory and design'),
-        ('8', 'Gaming and Interactive Media', 'DeVry University', 'GameDev', 'BS Specialization course for technology majors'),
+        ('8', 'Gaming and Interactive Media', 'DeVry University', 'GameDev', 'BS Specialization class for technology majors'),
         ('9', 'CyberSecurity', 'Michigan State University', 'Cyber Security', '24 week bootcamp at College of Engineering');
 
