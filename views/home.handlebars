@@ -2,14 +2,29 @@
     <h3>Schools in our class listings:</h3>
 
   <ol class="school-list">
-      {{#each courses as |course|}}
+      {{#each course as |course|}}
       <li>
-	    <article class="course">
-       <div class="title">
-          <p {{course.school}}></p>
+	    <article class="course-name">
+       <div class="title-school">
+        {{school}} 
         </div>
       </article>
       </li>
   {{/each}}
   </ol>
 </aside>
+
+<article class="cards">
+  {{#each course as |course|}}
+  <li>
+ <div class="cards-name">
+   {{school}}
+  </div>
+  <div class="cards-course-name">
+   {{course_name}}
+ </div>
+</article>
+</li>
+{{/each}}
+</ol>
+</article>

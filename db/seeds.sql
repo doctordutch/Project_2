@@ -1,4 +1,4 @@
-INSERT INTO course (id, course_name, school, category, synopsis)
+INSERT INTO courses (id, course_name, school, category, synopsis)
 VALUES  ('1', 'Coding Bootcamp', 'Michigan State University', 'Web Design', 'Async classes for front and back end code certification'),
         ('2', 'Game Art & Development', 'SNHU', 'GameDev', 'Online classes in 3D ARt and Design, Creative Design and Character Animation'),
         ('3', 'Data Mining & Analytics', 'Devry University', 'Cyber Security', 'Virtual classes in predictive data models, cloud computing and security'),

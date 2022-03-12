@@ -8,7 +8,6 @@ const res = require('express/lib/response');
 // get all courses
 router.get('/', (req, res) => {
     Course.findAll({
-      
       attributes: [
         'id', 
         'course_name', 
