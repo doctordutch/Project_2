@@ -1,14 +1,16 @@
 const router = require('express').Router();
-const res = require('express/lib/response');
+//const res = require('express/lib/response');
 const {User, Course, Comment, Vote} = require('../models');
 
 router.get('/', (req, res) => {
-    User.findAll()
+    User.findAll({
+        attributes: ['username'],
 })
 .then(dbUserData => res.json(dbUserData))
 .catch(err => {
     console.log(err);
     res.status(500).json(err);
+});
 });
 
 router.get('/:id', (req, res) => {
@@ -51,15 +53,14 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     User.create({
-        user_id: req.body.user_id
-
+        username: req.body.username
 }) .then(dbUserData => {
     res.json(dbUserData);
 })
 .catch(err => {
     console.log(err);
     res.status(500).json(err);
-})
-})
+});
+});
 
 module.exports = router;

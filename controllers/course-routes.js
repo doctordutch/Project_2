@@ -74,7 +74,7 @@ router.get('/', (req, res) => {
   router.put('/upvote', (req, res) => {
     Vote.create({
       user_id: req.body.user_id,
-      post_id: req.body.course_id
+      course_id: req.body.course_id
     })
     .then(dbCourseData => res.json(dbCourseData))
     .catch(err => res.json(err));
