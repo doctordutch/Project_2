@@ -1,4 +1,14 @@
 	<aside>
     <h3>Courses</h3>
   </aside>
-	
+  <ol class="school-list">
+      {{#each course as |Courses|}}
+      <li>
+	    <article class="course">
+       <div class="title">
+          <p {{ course.school}}></p>
+        </div>
+      </article>
+      </li>
+  {{/each}}
+  </ol>
