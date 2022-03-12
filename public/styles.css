@@ -84,3 +84,30 @@ title {
 .course {
     color: black;
 }
+
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+
+
+ul.cards  {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+li.cards {
+    width: 200px;
+}
+
+.cards-name {
+    width: 200px;
+}
+
+.cards-course-name {
+    width: 200px;
+}

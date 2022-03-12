@@ -36,6 +36,6 @@ app.get('/courses', (req, res, next) => routeCourse(req, res, next))
 
 // Start the server
 const PORT = process.env.PORT || 3001
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('success'))
 });
