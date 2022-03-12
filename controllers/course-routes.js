@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Course } = require('../models');
+const { Course, Vote, Comment, User } = require('../models');
 const sequelize = require('../config/connection');
 ////const req = require('express/lib/request');
 const res = require('express/lib/response');
@@ -69,5 +69,35 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
   });
+
+
+  router.put('/upvote', (req, res) => {
+    Vote.create({
+      user_id: req.body.user_id,
+      post_id: req.body.course_id
+    })
+    .then(dbCourseData => res.json(dbCourseData))
+    .catch(err => res.json(err));
+    });
+  
+
+  router.delete('/:id', (req, res) => {
+    Course.destroy({
+      where: {
+        id: req.params.id
+      }
+    }) .then(dbCourseData => {
+      if (!dbCourseData) {
+        res.status(404).json({message: 'No course found with this id'});
+        return;
+      }
+      res.json(dbCourseData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status.apply(500).json(err);
+    });
+  });
+
 
   module.exports = router;
