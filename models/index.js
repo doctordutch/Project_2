@@ -27,6 +27,12 @@ User.hasMany(Vote, {
     foreignKey: 'user_id'
 });
 
+Course.hasMany(Comment, {
+    foreignKey: 'course_id'
+});
 
+Course.hasMany(User, {
+    foreignKey: 'user_id'
+});
 
 module.exports = { Course , Vote, User, Comment };

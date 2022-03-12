@@ -17,6 +17,13 @@ Vote.init(
                     model: 'user',
                     key: 'id'
                 }
+            },
+            course_id: {
+                type: DataTypes.INTEGER,
+                references: {
+                    model: 'course',
+                    key: 'id'
+                }
             }
         },
         {
