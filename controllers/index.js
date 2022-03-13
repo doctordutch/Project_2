@@ -3,7 +3,7 @@ const router = require('express').Router();
 const courseRoutes = require('./course-routes');
 const homeRoutes = require('./home-routes')
 const commentRoutes = require('./comment-routes');
-const userRoutes = require('./user-routes');
+const userRoutes = require('./user-routes.js');
 
 
 router.use('/courses', courseRoutes);

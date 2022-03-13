@@ -1,6 +1,7 @@
 const { Course } = require('../models');
 
 const courseData = [
+
   {
     id: 1,
     course_name: 'Coding Bootcamp',
@@ -72,9 +73,11 @@ const courseData = [
         category: 'Cyber Security',
         synopsis: '24 week bootcamp at College of Engineering',
         file_image: 'cyberSecurity.jpg'
+
     },
 
 ];
 
 const seedCourse = () => Course.bulkCreate(courseData);
 module.exports = seedCourse;
+
