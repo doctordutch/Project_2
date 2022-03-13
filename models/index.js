@@ -28,7 +28,7 @@ User.hasMany(Vote, {
 });
 
 Course.hasMany(Comment, {
-    foreignKey: 'course_id'
+    foreignKey: 'user_id'
 });
 
 Course.hasMany(User, {

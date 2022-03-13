@@ -80,6 +80,9 @@ title {
     padding: 90px;
 }
 
+.course {
+    color: black;
+=======
 
 .course {
     color: black;
@@ -110,4 +113,5 @@ li.cards {
 
 .cards-course-name {
     width: 200px;
+
 }
