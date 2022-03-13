@@ -1,0 +1,27 @@
+{{> courses course}}
+
+<form class="comments">
+    <div>
+        <textarea name="adding-comments"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">Add Comment:</button>
+        <button type="button" class="upvote-btn">Vote</button>
+    </div>
+</form>
+
+
+<div class="commentary">
+    {{#each courses}}
+    <section class="comment-course">
+        <div class="education">
+            {{username}}
+        </div>
+        <div class="opinion">
+            {{comments}}
+        </div>
+    </section>
+    {{/each}}
+</div>
+<script src="../public/js/comment.js"></script>

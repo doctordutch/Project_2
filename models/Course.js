@@ -26,6 +26,7 @@ Course.init(
     synopsis: {
         type: DataTypes.STRING,
         allowNull: false
+  
     }
     // file: {
     //   type: DataTypes.STRING,

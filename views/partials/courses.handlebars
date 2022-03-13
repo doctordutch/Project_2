@@ -1,0 +1,11 @@
+<div class="add">
+    <div class="add-title">
+        {{course.course_name}}
+    </div>
+    <div class="voting">
+        {{course.vote_count}} point by {{course.user.username}}
+        |
+        <a href="/course/{{course.id}}">{{course.comments.length}} </a>
+    </div>
+</article>
+
