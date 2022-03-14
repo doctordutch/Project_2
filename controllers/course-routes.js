@@ -15,7 +15,6 @@ router.get('/', (req, res) => {
         'category',
         'synopsis',
         'file_image',
-
         //'created_at',
         [sequelize.literal('(SELECT COUNT (*) FROM vote WHERE course.id = vote.course_id)'), 'vote_count']
       ],

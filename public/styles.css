@@ -80,7 +80,6 @@ title {
     padding: 90px;
 }
 
-
 .course {
     color: black;
 }
@@ -119,7 +118,6 @@ li.cards {
 .cards-course-name {
     width: 200px;
     flex-wrap: nowrap;
-
 }
 
 .comments {
