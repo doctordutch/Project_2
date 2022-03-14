@@ -89,6 +89,8 @@ title {
     display: flex;
     justify-content: space-between;
     width: 200px;
+    flex-wrap: nowrap;
+    height: 426px;
 }
 
 
@@ -97,17 +99,27 @@ ul.cards  {
     display: flex;
     justify-content: space-between;
     width: 200px;
+    flex-wrap: nowrap;
+
 }
 
 li.cards {
     width: 200px;
+    flex-wrap: nowrap;
+
 }
 
 .cards-name {
     width: 200px;
+    flex-wrap: nowrap;
+
 }
 
 .cards-course-name {
     width: 200px;
+    flex-wrap: nowrap;
+}
 
+.comments {
+    border: 30px solid black;
 }
