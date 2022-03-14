@@ -13,9 +13,11 @@ router.get('/', (req, res) => {
         'course_name', 
         'school', 
         'category',
-        'synopsis'
+        'synopsis',
+        'file_image',
+
         //'created_at',
-        //[sequelize.literal('(SELECT COUNT (*) FROM vote WHERE course.id = vote.course_id)'), 'vote_count']
+        [sequelize.literal('(SELECT COUNT (*) FROM vote WHERE course.id = vote.course_id)'), 'vote_count']
       ],
       //this determines the sort/order in which posts will appear
       order: [['school', 'DESC']],
@@ -53,7 +55,9 @@ router.get('/', (req, res) => {
         'course_name', 
         'school', 
         'category',   
-        'synopsis'
+        'synopsis',
+        'file_image'
+
         //'created_at'
           [sequelize.literal('(SELECT COUNT (*) FROM vote WHERE course.id = vote.course_id)'), 'vote_count']
       ],
@@ -92,7 +96,8 @@ router.get('/', (req, res) => {
       course_name: req.body.course_name,
       school: req.body.school,
       category: req.body.category,
-      synopsis: req.body.synopsis
+      synopsis: req.body.synopsis,
+      file_image: req.body.file_image
       
     })
     .then(dbCourseData => res.json(dbCourseData))

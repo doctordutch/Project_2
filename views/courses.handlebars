@@ -1,4 +1,19 @@
-{{> courses course}}
+<section class="display">
+    <h4 class="school-name">{{course.school}}</h4>
+    <h4>{{course.course_name}}</h4>
+    {{#each course as |course}}
+    {{> courses}}
+    {{/each}}
+</section>
+
+
+   <div class="about">
+      <img src="/images/{{file_image}}" alt="{{synopsis}}">
+      <div>
+      <p> {{school}}</p>
+      {{course_name}}
+    </div>
+</section>
 
 <form class="comments">
     <div>
@@ -24,4 +39,4 @@
     </section>
     {{/each}}
 </div>
-<script src="../public/js/comment.js"></script>
+<script src="/js/comment.js"></script>

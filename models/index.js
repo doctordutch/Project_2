@@ -36,5 +36,4 @@ Course.hasMany(User, {
 });
 
 
-
 module.exports = { Course , Vote, User, Comment };

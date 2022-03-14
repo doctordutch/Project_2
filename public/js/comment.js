@@ -1,7 +1,7 @@
 async function addcommentsFormHandler(event) {
     event.preventDefault();
 
-    const comments = document.querySelector('textarea[name="adding-comments"]').ariaValueMax.trim();
+    const comments = document.querySelector('textarea[name="adding-comments"]').value.trim();
     const course_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];

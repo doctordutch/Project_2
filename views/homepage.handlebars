@@ -1,0 +1,48 @@
+	<aside>
+    <h3>Schools in our class listings:</h3>
+
+  <ol class="school-list">
+      {{#each course as |course|}}
+      <li>
+	    <article class="course-name">
+       <div class="title-school">
+        {{school}} 
+        </div>
+      </article>
+      </li>
+  {{/each}}
+  </ol>
+</aside>
+
+
+{{#each course as |course|}}
+{{>  courses }}
+{{/each}}
+
+<section class="img">
+    <h4 class="img-school">{{course.course_name}}</h4>
+    <section>
+        {{#each course.images as |image|}}
+        {{> course}}
+        {{/each}}
+    </section>
+</section>
+
+<form class="add-comment">
+
+  <div>
+    <textarea name="course_id"></textarea>
+  </div>
+    
+    <div>
+        <textarea name="add-comment-body"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">add comment</button>
+        <button type="button" class="vote-btn">vote</button>
+    </div>
+</form>
+{{> comment }}
+
+<script src="/js/comment.js"></script>

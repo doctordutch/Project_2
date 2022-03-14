@@ -26,12 +26,12 @@ Course.init(
     synopsis: {
         type: DataTypes.STRING,
         allowNull: false
-  
+    },
+    file_image: {
+      type: DataTypes.STRING,
+      allowNull: false,
     }
-    // file: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // }
+  
 },
   {
     sequelize,

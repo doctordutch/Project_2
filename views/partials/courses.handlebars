@@ -3,9 +3,19 @@
         {{course.course_name}}
     </div>
     <div class="voting">
-        {{course.vote_count}} point by {{course.user.username}}
-        |
-        <a href="/course/{{course.id}}">{{course.comments.length}} </a>
+        {{vote_count}}  {{user.username}}
+        
+        <a href="/courses/{{id}}">{{course.comments.length}} </a>
     </div>
 </article>
+
+
+
+    <div class="classes">
+      <a href="/courses/{{id}}">
+      <img src="/images/{{file_image}}" alt="{{synopsis}}">
+      <h2> {{school}}</h2>
+  </a>   
+   </div>
+
 
