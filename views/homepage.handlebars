@@ -1,17 +1,17 @@
 	<aside>
-    <h3>Schools in our class listings:</h3>
-
-  <ol class="school-list">
+    <h3>Courses available in:</h3>
+    <h2>Web Design, Gaming and CyberSecurity</h2>
+  <!--<ol class="school-list">
       {{#each course as |course|}}
       <li>
 	    <article class="course-name">
        <div class="title-school">
-        {{school}} 
+        {{course_name}} 
         </div>
       </article>
       </li>
   {{/each}}
-  </ol>
+  </ol>-->
 </aside>
 
 
@@ -31,15 +31,16 @@
 <form class="add-comment">
 
   <div>
-    <textarea name="course_id"></textarea>
+    <textarea name="course_id" >Enter course name here</textarea>
   </div>
     
     <div>
-        <textarea name="add-comment-body"></textarea>
+        <textarea name="add-comment-body">Add Comments here</textarea>
+        <button type="submit">add comment</button>
     </div>
 
     <div>
-        <button type="submit">add comment</button>
+        
         <button type="button" class="vote-btn">vote</button>
     </div>
 </form>
