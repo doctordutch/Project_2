@@ -16,34 +16,8 @@
 
 
 {{#each course as |course|}}
-{{>  courses }}
+
+{{> courses }}
 {{/each}}
 
-<section class="img">
-    <h4 class="img-school">{{course.course_name}}</h4>
-    <section>
-        {{#each course.images as |image|}}
-        {{> course}}
-        {{/each}}
-    </section>
-</section>
 
-<form class="add-comment">
-
-  <div>
-    <textarea name="course_id" >Enter course name here</textarea>
-  </div>
-    
-    <div>
-        <textarea name="add-comment-body">Add Comments here</textarea>
-        <button type="submit">add comment</button>
-    </div>
-
-    <div>
-        
-        <button type="button" class="vote-btn">vote</button>
-    </div>
-</form>
-{{> comment }}
-
-<script src="/js/comment.js"></script>

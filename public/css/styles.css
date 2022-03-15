@@ -128,3 +128,7 @@ li.cards {
 .comments {
     border: 30px solid black;
 }
+
+.add-comment {
+    margin: 300px -300px;
+}

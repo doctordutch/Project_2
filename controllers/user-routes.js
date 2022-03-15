@@ -1,6 +1,6 @@
 const router = require('express').Router();
 //const res = require('express/lib/response');
-const {User, Course, Comment, Vote} = require('../models');
+const {User, Course, Comment, Vote, Images} = require('../models');
 
 router.get('/', (req, res) => {
     User.findAll({
@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
     include: [
         {
             model: Course,
-            attributes: ['id', 'course_name']
+            attributes: ['id', 'category']
         },
 
         {
@@ -31,6 +31,15 @@ router.get('/:id', (req, res) => {
                 model: Course,
                 attributes: ['course_id']
             }
+        },
+
+        {
+            model: Images,
+            attributes: ['id', 'school', 'course_name', 'synopsis', 'file_image', 'course_id'],
+            include: {
+                model: Course,
+                attributes: ['id']
+          }
         },
         {
             model: Course,
