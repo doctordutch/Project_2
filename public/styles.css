@@ -1,19 +1,24 @@
 
 header {
     text-align: center;
+    position: fixed;
+    display: inline;
 }
 
 h1 {
     background-color: rgb(152, 122, 180);
-    margin: -6px -6px 5px ;
+
+    position: fixed;
+    display: inline;
 }
 
 h3 {
     text-align: center;
+   
 }
 nav {
     background-color: rgb(152, 122, 180);
-    margin: -6px -6px 5px ;
+    position: fixed;
     word-spacing: 50px;
 }
 
