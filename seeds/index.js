@@ -5,7 +5,7 @@ const seedUser = require('./userData');
 const seedVote = require('./voteData');
 
 const seedAll = async () => {
-    await sequelize.sync({forced: true });
+    await sequelize.sync({forced: false });
     await seedUser();
 
     await seedCourse();

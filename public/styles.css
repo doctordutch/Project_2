@@ -1,9 +1,25 @@
-
 header {
-    text-align: center;
-    position: fixed;
-    display: inline;
+    padding: 20px;
 }
+
+.navbar {
+    background: linear-gradient(to left, rgb(102, 39, 173), rgb(168, 87, 157));
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: linear-gradient(to left, rgb(102, 39, 173), rgb(168, 87, 157));
+    color: white;
+}
+
+.card {
+    padding: 10px;
+    margin: 10px;
+    background: linear-gradient(to left, rgb(102, 39, 173), rgb(168, 87, 157));
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 420px;
+}
+
 
 h1 {
     background-color: rgb(152, 122, 180);
@@ -34,7 +50,6 @@ footer {
 }
 
 
-
 .inv-head {
     font-weight: bold;
 }
@@ -43,37 +58,40 @@ a {
     text-decoration: none;
     color: black;
 }
+
 body {
-    background-color: rgb(196, 184, 162);
+    background: linear-gradient(to left, #3a3091, #5887ee);
     display: flex;
     flex-direction: column;
     min-height: 1920px;
     justify-content: flex-start;
 }
 
+.courselist {
+    background: linear-gradient(to left, #3a3091, #5887ee);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 aside {
     text-align: left;
     color: black;
-    background-color: blueviolet;
+    background: linear-gradient(to left, #5887ee, #3a3091);
     flex-flow: row wrap;    
-    width: 40%;
-    padding: 90px;
-    flex: 0;
-    margin-top: -5px;
-    margin-left: -7px;
-    display: block;
-    
-
+    width: 22%;
+    padding: 10px;
+    display: inline;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2); 
 }
+
 .school-list {
     color: orange;
 }
+
 .courses {
     align-items: center;
     display: flex;
     background-color: rgb(196, 184, 162);
     justify-content: center;
-
 }
 
 img {
@@ -97,7 +115,6 @@ title {
     flex-wrap: nowrap;
     height: 426px;
 }
-
 
 
 ul.cards  {
@@ -127,4 +144,9 @@ li.cards {
 
 .comments {
     border: 30px solid black;
+}
+
+.add-comment {
+    margin: 20px;
+    padding: 10px;
 }
