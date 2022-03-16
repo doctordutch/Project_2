@@ -149,3 +149,7 @@ li.cards {
 .add-comment {
     margin: 300px -300px;
 }
+
+.add {
+    justify-content: center;
+}

@@ -6,8 +6,8 @@ const sequelize = require("./config/connection");
 
 // require routes
 const routes = require('./controllers')
-const routeHome = require('./routes/home')
-const routeAbout = require('./routes/about')
+const routeHome = require('./controllers/home-routes')
+const routeAbout = require('./controllers/about-routes')
 const routeCourse = require('./controllers/course-routes')
 //const { sequelize } = require('./models/Course')
 
