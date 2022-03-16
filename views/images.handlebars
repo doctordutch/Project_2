@@ -1,13 +1,19 @@
-<section class="picture">
-    <img src="/images/{{images.file_image}}" alt="{{images.synopsis}}">
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+      <div class="card mycard">
+        <div class="card-body">
+          <h5 class="card-title">
+             <img src="/images/{{images.file_image}}" alt="{{images.synopsis}}">
     <h5>Course Name: {{images.course_name}}</h5>
     <h5>School: {{images.school}}</h5>
-    <h5> Descriptions: {{images.synopsis}}</h5>
-</section>
-
-
+    <h5> Description: <br>{{images.synopsis}}</h5>
+          </h5>
+        </div>
+      </div>
+  </div>
+</div>
 
 {{> comments}}
 
-
+</div>
 
