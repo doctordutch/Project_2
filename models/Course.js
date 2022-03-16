@@ -11,26 +11,12 @@ Course.init(
       primaryKey: true,
       autoIncrement: true
     },
-    course_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    school: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
+  
     category: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    synopsis: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    file_image: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    }
+   
   
 },
   {
@@ -43,3 +29,5 @@ Course.init(
 );
 
 module.exports = Course;
+
+

@@ -1,7 +1,6 @@
-<section class="display">
-    <h4 class="school-name">{{course.school}}</h4>
-    <h4>{{course.course_name}}</h4>
-    {{#each course as |course}}
+<section class="photos">
+    <h4 class="photo-name">{{images.course_name}}</h4>
+    {{#each course.images as |images|}}
     {{> courses}}
     {{/each}}
 </section>

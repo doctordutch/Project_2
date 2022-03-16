@@ -1,21 +1,16 @@
 <div class="add">
-    <div class="add-title">
-        {{course.course_name}}
-    </div>
-    <div class="voting">
-        {{vote_count}}  {{user.username}}
-        
-        <a href="/courses/{{id}}">{{course.comments.length}} </a>
-    </div>
+     <div class="classes">
+    <h3>{{images.school}}</h3>
+    <a href="/images/{{id}}">
+      <img src="/images/{{images.[0].file_image}}" alt="{{images.[0].synopsis}}">
+
+      </a>
+  </a>   
+   </div>
 </article>
 
 
-
-    <div class="classes">
-      <a href="/courses/{{id}}">
-      <img src="/images/{{file_image}}" alt="{{synopsis}}">
-      <h2> {{course_name}}</h2>
-  </a>   
-   </div>
+<h2></h2>
+   
 
 
