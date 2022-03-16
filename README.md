@@ -1,3 +1,10 @@
+Welcome to our site!
+Please enter your info, you will be pleased to see that you will find all your needs for future courses.
+It will allow you to see comments and reviews from previous students, so you dont waste your time!!
+
+
+
+
 <h1 align="center">CourseCritic</h1>
 
 <p align="center">
