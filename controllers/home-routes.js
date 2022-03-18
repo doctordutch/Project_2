@@ -5,9 +5,9 @@ const { Comment, Course, User, Vote , Images} = require('../models');
 
 
 
-    router.get('/', (req, res) => {
-        Course.findAll({
-            
+router.get('/', (req, res) => {
+    console.log(req.session);
+    Course.findAll({        
             include: [
                 {
                     model: Images,
@@ -32,9 +32,9 @@ const { Comment, Course, User, Vote , Images} = require('../models');
         });
     })
 
-    router.get('/courses/:id', (req, res) => {
-            Course.findByPk(req.params.id, {
-                attributes: [
+router.get('/courses/:id', (req, res) => {
+    Course.findByPk(req.params.id, {
+        attributes: [
                     'id', 
                     'category',   
                     //'created_at'
@@ -89,8 +89,15 @@ try {
             res.status(500).json(err);
 
         }
-    })
+    });
 
+router.get('/login', (req, res) => {
+        if (req.session.loggedIn) {
+          res.redirect('/');
+          return;
+        }
+      
+        res.render('login');
+      });
 
 module.exports = router;
-

@@ -3,12 +3,12 @@ header {
 }
 
 .navbar {
-    background: linear-gradient(to left, rgb(102, 39, 173), rgb(168, 87, 157));
+    background: linear-gradient(to left, rgb(107, 84, 207), rgb(168, 87, 157));
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 button {
-    background: linear-gradient(to left, rgb(102, 39, 173), rgb(168, 87, 157));
+    background: linear-gradient(to left, rgb(131, 58, 214), rgb(168, 87, 157));
     color: white;
 }
 
