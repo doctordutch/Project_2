@@ -13,6 +13,7 @@ const routes = require('./controllers')
 const routeHome = require('./controllers/home-routes')
 const routeAbout = require('./controllers/about-routes')
 const routeCourse = require('./controllers/course-routes')
+const auth = require('./auth/auth')
 //const { sequelize } = require('./models/Course')
 
 const app = express();
@@ -51,10 +52,13 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 // Set your routes here
+
 app.use(routes);
 app.get('/', (req, res, next) => routeHome(req, res, next))
 app.get('/about', (req, res, next) => routeAbout(req, res, next))
 app.get('/courses', (req, res, next) => routeCourse(req, res, next))
+app.get('/auth/',  (req, res, next) => auth(req, res, next))
+
 
 // Start the server
 const PORT = process.env.PORT || 3001
