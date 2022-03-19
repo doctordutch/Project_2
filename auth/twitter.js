@@ -13,9 +13,10 @@ passport.deserializeUser(function (id, fn) {
 });
 
 passport.use(new TwitterStrategy({
-    consumerKey: "nmbk1uqKB0rbWjBxrPv9iksEf",
-    consumerSecret: "QeBlJHanPy232ZbOhyPisfI8hLLUVMujXjuI7Sz0Ym4o6m7eGF",
-    callbackURL: "http://127.0.0.1/auth/twitter/callback"
+    consumerKey: "3AnMm3hGPMMuOAfkThzCF06SL",
+    consumerSecret: "Nle9HQwNDcL6F48e0OkGgxkvGAMDF4lSxjn7tRTm00korZDKoB",
+    callbackURL: "http://localhost:3001/auth/twitter/callback",
+    proxy: true
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate({name: profile.displayName}, {name: profile.displayName,userid: profile.id}, function(err, user) {

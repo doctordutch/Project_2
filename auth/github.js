@@ -3,9 +3,10 @@ var passport = require('passport')
 var User = require('../models/User');
 
 passport.use(new GitHubStrategy({
-    clientID: "e7b10decd2ed4ef13816",
-    clientSecret: "bb073a53914d014f328de98ad9fe5a3cff366912",
-    callbackURL: "http://127.0.0.1/auth/github/callback"
+    clientID: "95f3d3a98a993d640f8a",
+    clientSecret: "29300509f6ffd01abb7d525babeb692a602c872b",
+    callbackURL: "http://localhost:3001/auth/github/callback",
+    proxy: true
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate({userid: profile.id}, {name: profile.displayName,userid: profile.id}, function (err, user) {

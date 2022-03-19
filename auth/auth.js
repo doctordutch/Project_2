@@ -13,7 +13,7 @@ router.get('/login', function(req, res, next) {
 /* LOGOUT ROUTER */
 router.get('/logout', function(req, res){
     req.logout();
-    res.redirect('/');
+    res.redirect('/home');
   });
 
 /* FACEBOOK ROUTER */
@@ -24,7 +24,7 @@ router.get('/facebook/callback',
   passportFacebook.authenticate('facebook', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/');
+    res.redirect('/home');
   });
 
 /* TWITTER ROUTER */
@@ -35,7 +35,7 @@ router.get('/twitter/callback',
   passportTwitter.authenticate('twitter', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/');
+    res.redirect('/home');
   });
 
 /* GOOGLE ROUTER */
@@ -45,7 +45,7 @@ router.get('/google',
 router.get('/google/callback',
   passportGoogle.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
-    res.redirect('/');
+    res.redirect('/home');
   });
 
 /* GITHUB ROUTER */
@@ -56,7 +56,7 @@ router.get('/github/callback',
   passportGitHub.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/');
+    res.redirect('/home');
   });
 
 module.exports = router;

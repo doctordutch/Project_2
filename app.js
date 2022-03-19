@@ -13,13 +13,16 @@ const routes = require('./controllers')
 const routeHome = require('./controllers/home-routes')
 const routeAbout = require('./controllers/about-routes')
 const routeCourse = require('./controllers/course-routes')
+const routeUsers = require ('./controllers/user-routes')
 const auth = require('./auth/auth')
 //const { sequelize } = require('./models/Course')
 
 const app = express();
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: {
+    secure: false,
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -57,7 +60,7 @@ app.use(routes);
 app.get('/', (req, res, next) => routeHome(req, res, next))
 app.get('/about', (req, res, next) => routeAbout(req, res, next))
 app.get('/courses', (req, res, next) => routeCourse(req, res, next))
-app.get('/auth/',  (req, res, next) => auth(req, res, next))
+app.get('/auth',  (req, res, next) => auth(req, res, next))
 
 
 // Start the server
