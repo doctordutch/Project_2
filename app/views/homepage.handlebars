@@ -1,0 +1,37 @@
+
+<aside>
+  <div class="list-group courselist">
+  <button type="button btn-lg" class="list-group-item list-group-item-action" aria-current="true">
+    Courses available in:
+  </button>
+  <button type="button" class="list-group-item list-group-item-action">Web Design</button>
+  <button type="button" class="list-group-item list-group-item-action">Cyber Security</button>
+  <button type="button" class="list-group-item list-group-item-action">Game Design</button>
+  <button type="button" class="list-group-item list-group-item-action">Data Analytics</button>
+</div>
+</aside>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    {{#each course as |course|}}
+      <div class="card mycard">
+        <div class="card-body">
+          <h5 class="card-title">
+             {{>  courses }}
+          </h5>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+<section class="img">
+    <h4 class="img-school">{{course.course_name}}</h4>
+    <section>
+        {{#each course.images as |image|}}
+        {{> course}}
+        {{/each}}
+    </section>
+</section>
+
+

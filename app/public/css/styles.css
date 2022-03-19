@@ -1,0 +1,161 @@
+header {
+    padding: 20px;
+}
+
+.navbar {
+    background: linear-gradient(to left, rgb(107, 84, 207), rgb(168, 87, 157));
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: linear-gradient(to left, rgb(131, 58, 214), rgb(168, 87, 157));
+    color: white;
+}
+
+.loginBtn {
+    background: rgb(202, 16, 156);
+    margin: 10px;
+    padding: 20px;
+}
+
+.card {
+    padding: 10px;
+    margin: 10px;
+    background: linear-gradient(to left, rgb(102, 39, 173), rgb(168, 87, 157));
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 420px;
+}
+
+
+h1 {
+    background-color: rgb(152, 122, 180);
+
+    position: fixed;
+    display: inline;
+}
+
+h3 {
+    text-align: center;
+   
+}
+nav {
+    background-color: rgb(152, 122, 180);
+    position: fixed;
+    word-spacing: 50px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+footer {
+    text-align: center; 
+    text-decoration: none;
+}
+
+
+.inv-head {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background: linear-gradient(to left, #3a3091, #5887ee);
+    display: flex;
+    flex-direction: column;
+    min-height: 1920px;
+    justify-content: flex-start;
+}
+
+.courselist {
+    background: linear-gradient(to left, #3a3091, #5887ee);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+aside {
+    text-align: left;
+    color: black;
+    background: linear-gradient(to left, #5887ee, #3a3091);
+    flex-flow: row wrap;    
+    width: 22%;
+    padding: 10px;
+    display: inline;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2); 
+}
+
+.school-list {
+    color: orange;
+}
+
+.courses {
+    align-items: center;
+    display: flex;
+    background-color: rgb(196, 184, 162);
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+title {
+    padding: 90px;
+}
+
+.course {
+    color: black;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    flex-wrap: nowrap;
+    height: 426px;
+}
+
+
+ul.cards  {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    flex-wrap: nowrap;
+
+}
+
+li.cards {
+    width: 200px;
+    flex-wrap: nowrap;
+
+}
+
+.cards-name {
+    width: 200px;
+    flex-wrap: nowrap;
+
+}
+
+.cards-course-name {
+    width: 200px;
+    flex-wrap: nowrap;
+}
+
+.comments {
+    border: 30px solid black;
+}
+
+.add-comment {
+    margin: 300px -300px;
+}
+
+.add {
+    justify-content: center;
+}
