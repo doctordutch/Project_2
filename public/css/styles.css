@@ -12,6 +12,12 @@ button {
     color: white;
 }
 
+.loginBtn {
+    background: rgb(202, 16, 156);
+    margin: 10px;
+    padding: 20px;
+}
+
 .card {
     padding: 10px;
     margin: 10px;
