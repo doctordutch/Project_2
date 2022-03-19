@@ -2,6 +2,11 @@ const router = require('express').Router();
 //const res = require('express/lib/response');
 const {User, Course, Comment, Vote, Images} = require('../models');
 
+var passportFacebook = require('../auth/facebook');
+var passportTwitter = require('../auth/twitter');
+var passportGoogle = require('../auth/google');
+var passportGitHub = require('../auth/github');
+
 router.get('/', (req, res) => {
     User.findAll({
         attributes: ['username'],
