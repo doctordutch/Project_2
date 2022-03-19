@@ -10,21 +10,21 @@ Vote.init(
             primaryKey: true,
             autoIncrement: true
         },
-            user_id: {
-                type: DataTypes.INTEGER,
-                allowNull: false,
-                references: {
-                    model: 'user',
-                    key: 'id'
-                }
-            },
-            course_id: {
-                type: DataTypes.INTEGER,
-                references: {
-                    model: 'course',
-                    key: 'id'
-                }
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'user',
+                key: 'id'
             }
+        },
+        course_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                 model: 'course',
+                 key: 'id'
+            }
+        }
         },
         {
             sequelize,

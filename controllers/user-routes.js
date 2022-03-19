@@ -4,7 +4,7 @@ const {User, Course, Comment, Vote, Images} = require('../models');
 
 router.get('/', (req, res) => {
     User.findAll({
-        attributes: ['username'],
+        attributes: ['id', 'username', 'email', 'password'],
 })
 .then(dbUserData => res.json(dbUserData))
 .catch(err => {
@@ -62,7 +62,9 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     User.create({
-        username: req.body.username
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
 }) .then(dbUserData => {
     res.json(dbUserData);
 })
