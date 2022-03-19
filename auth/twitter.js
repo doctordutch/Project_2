@@ -18,15 +18,21 @@ passport.use(new TwitterStrategy({
     callbackURL: "http://localhost:3001/auth/twitter/callback",
     proxy: true
   },
-  function(accessToken, refreshToken, profile, done) {
-    User.findOrCreate({name: profile.displayName}, {name: profile.displayName,userid: profile.id}, function(err, user) {
-      if (err) {
-        console.log(err);
-        return done(err);
-      }
-      done(null, user);
-    });
-  }
-));
+  
+function(accessToken, refreshToken, profile, done) {
+  User.findOne({userid: profile.id}).then((currentUser) => {
+    if(currentUser){
+      done(null, currentUser);
+    } else {
+      new User({
+        userid: profile.id,
+        name: profile.displayName
+      }).save().then((newUser) => {
+        console.log('created new user: ', newUser);
+        done(null, newUser);
+      });
+    }
+  });
+}));
 
 module.exports = passport;

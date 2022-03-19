@@ -8,8 +8,8 @@ passport.use(new GitHubStrategy({
     callbackURL: "http://localhost:3001/auth/github/callback",
     proxy: true
   },
-  function(accessToken, refreshToken, profile, done) {
-    User.findOrCreate({userid: profile.id}, {name: profile.displayName,userid: profile.id}, function (err, user) {
+  function(accessToken, refreshToken, profile, cb) {
+    User.findOrCreate({ githubId: profile.id }, function (err, user) {
       return done(err, user);
     });
   }

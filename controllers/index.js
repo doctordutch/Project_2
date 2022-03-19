@@ -12,7 +12,7 @@ router.use('/', homeRoutes);
 router.use('/comments', commentRoutes);
 router.use('/users', userRoutes);
 router.use('/about', aboutRoutes);
-router.use('/login', userRoutes);
+//router.use('/login', userRoutes);
 router.use('/auth', auth);
 
 router.use((req, res) => {

@@ -60,7 +60,7 @@ app.use(routes);
 app.get('/', (req, res, next) => routeHome(req, res, next))
 app.get('/about', (req, res, next) => routeAbout(req, res, next))
 app.get('/courses', (req, res, next) => routeCourse(req, res, next))
-app.get('/auth',  (req, res, next) => auth(req, res, next))
+app.get('/auth/',  (req, res, next) => auth(req, res, next))
 
 
 // Start the server
