@@ -16,7 +16,6 @@ router.get('/', (req, res) => {
         [sequelize.literal('(SELECT COUNT (*) FROM vote WHERE course.id = vote.course_id)'), 'vote_count']
       ],
       //this determines the sort/order in which posts will appear
-      order: [['school', 'DESC']],
       include: [
         {
             model: Comment,
