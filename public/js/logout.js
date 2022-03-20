@@ -10,5 +10,10 @@ async function logout() {
       alert(response.statusText);
     }
   }
-  
+
+//  passport.deserializeUser(function(user, done) {
+//    done(null, {id: user.id, email: user.email, role: user.role});
+//  });
+
+
   document.querySelector('#logout').addEventListener('click', logout);

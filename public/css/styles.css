@@ -7,6 +7,34 @@ header {
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+.classcol {
+    margin: 10px;
+    padding-top: 20px;
+    padding-left: 50px;
+    background: linear-gradient(to left, rgb(168, 87, 157), rgb(196, 184, 162));
+    box-shadow: 1px 1px 2px 1px rgb(152, 122, 180);
+    border-radius: 8px;
+    max-height: 90vh;
+}
+
+.cmtcol {
+    margin: 10px;
+    padding-top: 20px;
+    padding-left: 50px;
+    background: linear-gradient(to left, rgb(168, 87, 157), rgb(196, 184, 162));
+    box-shadow: 1px 1px 2px 1px rgb(152, 122, 180);
+    border-radius: 8px;
+    max-height: 90vh;
+    display: flex;
+}
+
+
+
+.usrcmt {
+    display: flex;
+    max-width: 50vh;
+}
+
 button {
     background: linear-gradient(to left, rgb(131, 58, 214), rgb(168, 87, 157));
     color: white;

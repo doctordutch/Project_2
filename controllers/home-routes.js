@@ -4,7 +4,6 @@ const sequelize = require('../config/connection');
 const { Comment, Course, User, Vote , Images} = require('../models');
 
 
-
 router.get('/', (req, res) => {
     console.log(req.session);
     Course.findAll({        
@@ -90,5 +89,14 @@ try {
 
         }
     });
+
+// router.get('/login', (req, res) => {
+//        if (req.session.loggedIn) {
+//          res.redirect('/');
+//          return;
+//        }
+//      
+//        res.render('login');
+//      });
 
 module.exports = router;

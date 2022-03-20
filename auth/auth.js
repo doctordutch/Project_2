@@ -36,6 +36,7 @@ router.get('/twitter/callback',
   passportTwitter.authenticate('twitter', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
+    res.json(req.user);
     res.redirect('/');
   });
 
@@ -57,6 +58,7 @@ router.get('/github/callback',
   passportGitHub.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
+    res.json(req.user);
     res.redirect('/');
   });
 

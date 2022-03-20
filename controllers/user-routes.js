@@ -7,6 +7,22 @@ var passportTwitter = require('../auth/twitter');
 var passportGoogle = require('../auth/google');
 var passportGitHub = require('../auth/github');
 
+
+function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) { return next(); }
+    res.redirect('/auth/login')
+  }
+
+// you can add the above function to any router.get call 
+// to redirect somewhere else if not logged in 
+//
+// (for example: 
+//      router.get('/', ensureAuthenticated, function(req, res, next) {
+//      res.render('user', { user: req.user });
+//      });
+//
+
+
 /* GET users listing. */
 router.get('/', (req, res) => {
   User.findAll({
