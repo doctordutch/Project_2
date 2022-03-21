@@ -2,7 +2,6 @@
 //  local strategy
 //  requires JS for grabbing login info from login page
 //
-//
 
 var passport = require('passport')
   , LocalStrategy = require('passport-local').Strategy;

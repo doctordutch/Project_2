@@ -1,28 +1,23 @@
-<section class="photos">
-    <h4 class="photo-name">{{images.course_name}}</h4>
-    {{#each course.images as |images|}}
-    {{> courses}}
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    {{#each course as |course|}}
+      <div class="card mycard">
+        <div class="card-body">
+          <h5 class="card-title">
+             {{>  courses }}
+          </h5>
+        </div>
+      </div>
     {{/each}}
-</section>
-
-
-<div class="about">
-      <img src="/images/{{file_image}}" alt="{{synopsis}}">
-      <div>
-      <p> {{school}}</p>
-      {{course_name}}
-    </div>
-</section>
+  </div>
+</div>
 
 
 <form class="comments">
     <div>
         <textarea name="adding-comments"></textarea>
-    </div>
-
-    <div>
+        <br>
         <button type="submit">Add Comment:</button>
-        <button type="button" class="upvote-btn">Vote</button>
     </div>
 </form>
 

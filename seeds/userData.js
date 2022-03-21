@@ -7,7 +7,6 @@ const userData = [
     username: 'alex',
     email: 'alex@yahoo.com',
     password: '123456',
-
     
   },
   {
@@ -16,7 +15,6 @@ const userData = [
     email: 'lauren@yahoo.com',
     password: '123456',
 
-    
 },
     {
         id: 3,
@@ -24,14 +22,12 @@ const userData = [
         email: 'maria@yahoo.com',
         password: '123456',
 
-        
     }, 
     {
         id: 4,
         username: 'ruby',
         email: 'ruby@yahoo.com',
         password: '123456',
-
 
         
     },
@@ -42,14 +38,12 @@ const userData = [
         password: '123456',
 
 
-        
     },
     {
         id: 6,
         username: 'raul',
         email: 'raul@yahoo.com',
         password: '123456',
-
 
         
     },
@@ -59,7 +53,6 @@ const userData = [
         email: 'randy@yahoo.com',
         password: '123456',
 
-
         
     },
     {
@@ -67,8 +60,6 @@ const userData = [
         username: 'siri', 
         email: 'siri@yahoo.com',
         password: '123456',
-
-
        
     },
     {
@@ -77,8 +68,6 @@ const userData = [
         email: 'max@yahoo.com',
         password: '123456',
 
-
-       
 
     },
 

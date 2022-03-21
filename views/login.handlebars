@@ -10,23 +10,25 @@
 </div>
 </aside>
 
-<div class="card text-black bg-dark mb-3" style="max-width: 400rem; max-height: 28rem;">
+<div class="card text-black bg-dark mb-3" style="max-width: 20rem; max-height: 26rem;">
   <div class="card-header">Account Login</div>
   <div class="card-body">
     <h5 class="card-title">Login to Comment and Vote</h5>
     <p class="card-text">
-  <div class="form-group">
-        <br>
-        <a class="btn-lg loginBtn" href='/auth/facebook'>Facebook</a>
-        <a class="btn-lg loginBtn" href='/auth/twitter'>Twitter</a>
-        <br><br><br><br>
-        <a class="btn-lg loginBtn" href='/auth/google'>Google</a>
-        <a class="btn-lg loginBtn" href='/auth/github'>Github</a>
+      <form class="login form justify-content-center">
+    <label for="email-login" class="form-label">Email:</label>
+    <input type="text" class="form-control" id="email-login" aria-describedby="emailHelp">
+    <label for="password-login" class="form-label">Password:</label>
+    <input type="password" class="form-control" id="pass">
+</div>
+ <div class="col-8">
+        <a class="btn-lg col-5 btn-secondary" href='/auth/twitter'>Twitter</a>
+       <a class="btn-lg col-5 btn-secondary" href='/auth/github'>Github</a>
   </div>
-        <form>
-  
-
+  <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+ 
     </p>
   </div>
 
