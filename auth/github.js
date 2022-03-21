@@ -1,6 +1,6 @@
 var passport = require('passport')
   , GitHubStrategy = require('passport-github2').Strategy;
-var User = require('../models/User');
+var User = require('../models/user');
 
 passport.use(new GitHubStrategy({
     clientID: "95f3d3a98a993d640f8a",
