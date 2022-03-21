@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Comment } = require('../models');
 
-
 router.get('/', (req, res) => {
     Comment.findAll({  
         attributes: ['id', 'comments', 'user_id', 'course_id'],
@@ -25,8 +24,6 @@ router.post('/', (req, res) => {
         res.status(400).json(err);
     });
 });
-
-
 
 router.delete('/:id', (req, res) => {
     Comment.destroy({

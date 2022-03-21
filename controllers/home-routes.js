@@ -3,7 +3,6 @@ const res = require('express/lib/response');
 const sequelize = require('../config/connection');
 const { Comment, Course, User, Vote , Images} = require('../models');
 
-
 router.get('/', (req, res) => {
     console.log(req.session);
     Course.findAll({        
