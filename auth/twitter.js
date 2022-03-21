@@ -13,8 +13,8 @@ passport.deserializeUser(function (id, fn) {
 });
 
 passport.use(new TwitterStrategy({
-    consumerKey: "3AnMm3hGPMMuOAfkThzCF06SL",
-    consumerSecret: "Nle9HQwNDcL6F48e0OkGgxkvGAMDF4lSxjn7tRTm00korZDKoB",
+    consumerKey: "****",
+    consumerSecret: "****",
     callbackURL: "http://localhost:3001/auth/twitter/callback",
     proxy: true
   },
