@@ -1,37 +1,10 @@
-<div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    {{#each course as |course|}}
-      <div class="card mycard">
-        <div class="card-body">
-          <h5 class="card-title">
-             {{>  courses }}
-          </h5>
-        </div>
-      </div>
-    {{/each}}
-  </div>
+<div class="container">
+<div class="row">
+<div class="col-md-5 classcol">
+    <img src="/images/{{images.file_image}}" alt="{{images.synopsis}}">
+    <h4>Course Name:</h4><h5>{{images.course_name}}</h5>
+    <h4>School:</h4><h5> {{images.school}}</h5>
+    <h4>Description:</h4><h6>{{images.synopsis}}</h6>
 </div>
-
-
-<form class="comments">
-    <div>
-        <textarea name="adding-comments"></textarea>
-        <br>
-        <button type="submit">Add Comment:</button>
-    </div>
-</form>
-
-
-<div class="commentary">
-    {{#each courses}}
-    <section class="comment-course">
-        <div class="education">
-            {{username}}
-        </div>
-        <div class="opinion">
-            {{comments}}
-        </div>
-    </section>
-    {{/each}}
-</div>
+{{> comments}}
 <script src="/js/comment.js"></script>
